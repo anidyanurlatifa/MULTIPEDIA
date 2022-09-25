@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar HTML 5 (Multimedia)</title>
+        <body>
+            <botton onclick="playVid()" type="button">Play Video</botton>
+            <botton onclick="pauseVid()" type="button">Pause Video</botton>
+            <botton  onclick="durationVid()" type="button">Duration Video</botton>
+            <h2>Video pada HTML 5</h2>
+            <video id="myVideo" width="320" height="240" controls>
+                <source src="mov_bbb.mp4" type="video/mp4">
+            </video>
+            <iframe width="560" height="315" src="
+            https://www.youtube.com/embed/UW_e9y5J6Kg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </body>
+        <script>
+            var vid = document.getElementById("myVideo");
+
+            function playVid() {
+                vid.play();
+            }
+            function pauseVid() {
+                vid.pause();
+            }
+            function durationVid() {
+                alert (vid.duration);
+            }
+        </script>
+    </head>
+</html>
